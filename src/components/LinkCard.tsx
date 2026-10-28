@@ -34,11 +34,11 @@ export default function LinkCard({ link, initialCount }: Props) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="relative flex min-h-16 items-center justify-center rounded-2xl border-2 border-neutral-800 bg-white px-16 py-4 font-medium shadow-sm transition hover:-translate-y-0.5 hover:border-green-600 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 dark:border-neutral-600 dark:bg-neutral-800 dark:hover:border-green-400"
+      className="relative flex min-h-[3.75rem] items-center justify-center rounded-3xl border border-white/70 bg-white/45 px-16 py-4 text-[15px] font-medium shadow-[0_14px_36px_-10px_rgb(30_50_90/0.35),0_4px_12px_-4px_rgb(30_50_90/0.15)] backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-px hover:bg-white/65 hover:shadow-[0_18px_44px_-10px_rgb(30_50_90/0.42),0_6px_14px_-4px_rgb(30_50_90/0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400 motion-reduce:transition-none motion-reduce:hover:translate-y-0 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-[0_14px_36px_-10px_rgb(0_0_0/0.7),0_4px_12px_-4px_rgb(0_0_0/0.4)] dark:hover:bg-white/10"
     >
       <span className="truncate">{link.title}</span>
       {count !== undefined && (
-        <span className="absolute right-4 text-xs text-neutral-500 dark:text-neutral-400">
+        <span className="absolute right-5 text-xs text-slate-400 dark:text-slate-500">
           {count.toLocaleString()}회 클릭
         </span>
       )}

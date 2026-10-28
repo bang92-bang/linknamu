@@ -9,17 +9,21 @@ type Props = {
 export default function ProfileHeader({ name, bio, image }: Props) {
   return (
     <header className="flex flex-col items-center text-center">
-      <Image
-        src={image}
-        alt={`${name} 프로필 사진`}
-        width={224}
-        height={224}
-        priority
-        unoptimized
-        className="h-48 w-48 rounded-full object-cover ring-4 ring-white shadow-md sm:h-56 sm:w-56 dark:ring-neutral-800"
-      />
-      <h1 className="mt-6 text-2xl font-bold">{name}</h1>
-      <p className="mt-2 text-lg text-neutral-600 dark:text-neutral-400">{bio}</p>
+      <div className="rounded-full bg-gradient-to-b from-white to-sky-100/80 p-1 shadow-[0_18px_40px_-12px_rgb(30_50_90/0.35),0_4px_10px_-4px_rgb(30_50_90/0.2)] dark:from-slate-600 dark:to-slate-800 dark:shadow-[0_18px_40px_-12px_rgb(0_0_0/0.6)]">
+        <Image
+          src={image}
+          alt={`${name} 프로필 사진`}
+          width={160}
+          height={160}
+          priority
+          unoptimized
+          className="h-36 w-36 rounded-full object-cover object-[center_20%] sm:h-40 sm:w-40"
+        />
+      </div>
+      <h1 className="mt-7 text-2xl font-bold tracking-tight">{name}</h1>
+      <p className="mt-2 max-w-xs text-[15px] leading-relaxed text-slate-500 dark:text-slate-400">
+        {bio}
+      </p>
     </header>
   );
 }

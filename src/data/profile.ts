@@ -15,12 +15,12 @@ export type Profile = {
 // - image: public/ 폴더에 사진을 넣고 경로를 바꾸면 됩니다 (예: "/me.jpg")
 // - id는 클릭 수 집계의 키로 쓰이므로 한 번 정하면 바꾸지 않는 것이 좋습니다.
 export const profile: Profile = {
-  name: "방클로",
-  bio: "세계 최강 바이브코더",
-  image: "/profile.svg",
+  name: "방개발",
+  bio: "풀스택 개발자: 요즘에는 AI 개발에 관심이 많아요",
+  image: "/profile.jpg",
   links: [
-    { id: "github", title: "GitHub", url: "https://github.com/your-id" },
-    { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com/in/your-id" },
-    { id: "blog", title: "Blog", url: "https://example.com" },
+    { id: "github", title: "🐙 깃허브", url: "https://github.com/bang92-bang/linknamu" },
+    { id: "instagram", title: "👍 인스타", url: "https://www.instagram.com/bushuli_/" },
+    { id: "email", title: "📮 이메일", url: "mailto:qkd4839@gmail.com" },
   ],
 };

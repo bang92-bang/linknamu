@@ -3,5 +3,24 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-50 text-neutral-900 transition-colors dark:bg-neutral-900 dark:text-neutral-100;
+  @apply min-h-dvh text-slate-800 dark:text-slate-100;
+}
+
+/* 배경은 고정 레이어로 깔아 스크롤·모바일(iOS)에서도 그라데이션이 늘어나지 않게 함 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 45% at 85% 10%, rgb(196 220 255 / 0.55), transparent 70%),
+    radial-gradient(55% 40% at 10% 90%, rgb(210 205 255 / 0.45), transparent 70%),
+    linear-gradient(165deg, #f7fafd 0%, #eaf1f9 50%, #dde6f4 100%);
+}
+
+.dark body::before {
+  background:
+    radial-gradient(60% 45% at 85% 10%, rgb(70 110 190 / 0.22), transparent 70%),
+    radial-gradient(55% 40% at 10% 90%, rgb(100 90 180 / 0.18), transparent 70%),
+    linear-gradient(165deg, #12161d 0%, #161b25 50%, #1b2130 100%);
 }

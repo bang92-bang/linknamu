@@ -21,10 +21,10 @@ export default async function Home() {
   const counts = await loadCounts();
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col px-6 py-16">
+    <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col px-7 pb-16 pt-20 sm:px-8 sm:pt-24">
       <ThemeToggle />
       <ProfileHeader name={profile.name} bio={profile.bio} image={profile.image} />
-      <nav aria-label="링크 목록" className="mt-10 flex flex-col gap-7">
+      <nav aria-label="링크 목록" className="mt-12 flex flex-col gap-5 sm:gap-6">
         {profile.links.map((link) => (
           <LinkCard
             key={link.id}
